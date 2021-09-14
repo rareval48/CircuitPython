@@ -1,4 +1,4 @@
-# CircuitPython1
+# CircuitPython
  The follwing files are my first foray into CircuitPython.
 ## Table of Contents
 * [Table of Contents](#TableOfContents)
