@@ -139,12 +139,67 @@ while True:
 
 
 
-## NextAssignment
+## LCD Capacitative Touch
 
 ### Description & Code
 
 ```python
-Code goes here
+from lcd.lcd import LCD
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+import board
+import time
+import touchio
+
+touch = touchio.TouchIn(board.A0)
+touch2 = touchio.TouchIn(board.A2)
+
+i2c = board.I2C()
+lcd = LCD(I2CPCF8574Interface(i2c, 0x3f), 16, 2, 8)
+print("Starting")
+print("Chasing")
+print("Caught")
+lcd.print("Print Now!                 ")
+time.sleep(1)
+lcd.print("No!")
+time.sleep(1)
+lcd.clear()
+
+testValue = 0
+
+a = 0
+b = 1
+
+Increase = 1
+ChangedAlready = 0
+
+while True:
+    time.sleep(0.1)
+    if touch.value:
+        if Increase == 1:
+            lcd.clear()
+            a = a + b
+            print(a)
+            lcd.print("\nTouches:")
+            lcd.print(str(a))
+        if Increase == 0:
+            lcd.clear()
+            a = a - b
+            print(a)
+            lcd.print("\nTouches:")
+            lcd.print(str(a))
+    if touch2.value:
+        print("Switch")
+        if ChangedAlready == 0:
+            if Increase == 1:
+                ChangedAlready = 1
+                Increase = 0
+        if ChangedAlready == 0:
+            if Increase == 0:
+                ChangedAlready = 1
+                Increase = 1
+    if ChangedAlready == 1:
+        time.sleep(1)
+        ChangedAlready = 0
 
 ```
 
@@ -153,3 +208,4 @@ Code goes here
 ### Images
 
 ### Reflection
+It took me a week of working to get this working and was the most difficult assignment. I learned many things while going through this assignment. On of them being, you cant use both lcd.message and lcd.print in the same code. Otherwise it wont do anythng and will show an error.
