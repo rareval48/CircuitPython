@@ -48,6 +48,8 @@ The first thing that I had to do was see what was happened to the Metro becasue 
 ## CircuitPython_Servo
 
 ### Description & Code
+[Full code](https://github.com/rareval48/CircuitPython/blob/main/servocode.py)
+
 Here is the code than makes the servo spin 180 degrees.
 ```python
 import time
@@ -72,7 +74,9 @@ while True:
 ```
 
 ### Evidence
-https://www.tinkercad.com/things/2mqeFAH6V5Y-circuit-python-servo/editel?sharecode=9riTHswIG1vkKIqi_YGy5JY-OuLX_4ErNghG6g9OvSQ
+<img src="https://github.com/rareval48/CircuitPython/blob/main/Images/Servo.png?raw=true" width="800px">
+
+
 ### Images
 <img src="https://user-images.githubusercontent.com/71342195/133264238-48bde56d-83d8-4563-89e4-3d9abb9a0ada.jpg"><img src="https://user-images.githubusercontent.com/71342195/133264256-2c03cd86-2a41-430d-8bce-b1d57e3de1d5.jpg">
 ### Reflection
