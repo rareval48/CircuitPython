@@ -73,12 +73,16 @@ while True:
 
 ```
 
-### Evidence
+### Wiring Diagram
 <img src="https://github.com/rareval48/CircuitPython/blob/main/Images/Servo.png?raw=true" width="800px">
 
 
 ### Images
-<img src="https://user-images.githubusercontent.com/71342195/133264238-48bde56d-83d8-4563-89e4-3d9abb9a0ada.jpg"><img src="https://user-images.githubusercontent.com/71342195/133264256-2c03cd86-2a41-430d-8bce-b1d57e3de1d5.jpg">
+<img src="https://user-images.githubusercontent.com/71342195/133264238-48bde56d-83d8-4563-89e4-3d9abb9a0ada.jpg">
+This first image is at the beginning at the rotation to 180 degrees
+<img src="https://user-images.githubusercontent.com/71342195/133264256-2c03cd86-2a41-430d-8bce-b1d57e3de1d5.jpg"> 
+The second image is at the end of the rotation to 180 degrees
+
 ### Reflection
 Mainly, the only problem I had was getting the code running, I had to "Make sure you have downloaded the appropriate Adafruit CircuitPython library bundle. So, if you're running version 6.x of CircuitPython, grab the 6.x bundle. Click "Extract All", then you'll find a "lib" folder and inside that you'll find an "adafruit_motor" folder, which contains the "servo.mpy" library.  Copy that file to the lib folder on your Metro and you can use Adafruit's amazing servo object!  In other words, you can say stuff like myServo.angle = 90 instead of having to figure out PWM communication." That was the hardest part of the project. The circuitry was pretty easy because there were only 3 wires to plug in.
 
