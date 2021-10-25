@@ -43,10 +43,7 @@ No wiring needed as I used onboard LED
 <img src="https://user-images.githubusercontent.com/71342195/132705470-5ed55196-d533-40a7-8287-22687f17d50c.jpg"> <img src="https://user-images.githubusercontent.com/71342195/132705916-4f73c04e-05ac-4eff-89e7-fa6141bc669f.jpg"><img src= "https://user-images.githubusercontent.com/71342195/132704790-18001dc9-acca-49ba-9342-20a454e6e22e.jpg" width="250px">
 
 ### Reflection
-The first thing that I had to do was see what was happened to the Metro becasue the serial monitor kept printing "Hello World" even though I had "Make Colors" with the print funtion. Then once that was fixed I had to see if the code I was using actually worked. Once I found out it worked I then stated filling out my notebook.
-
-
-
+The first thing that I had to do was see what was happened to the Metro becasue the serial monitor kept printing "Hello World" even though I had "Make Colors" with the print funtion. I had to reset the board everytime i updated my code to fix the problem. Once it was fixed the assignment got significantly easier.
 
 ## CircuitPython_Servo
 
@@ -211,7 +208,7 @@ while True: # Almost everything below this point is from Logan Martins code for 
         
 
 ```
-Here is the link for Logan Martins github https://github.com/Logan-Martin
+[Link for Logan Martins github](https://github.com/Logan-Martin)
 
 ### Evidence
 <img src="https://user-images.githubusercontent.com/71342195/138705220-4aaea59b-582e-4ce8-a230-049f65b8504c.png" width="800px">
