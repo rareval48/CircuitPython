@@ -4,8 +4,9 @@
 * [Table of Contents](#TableOfContents)
 * [Hello_CircuitPython](#Hello_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
+* [CircuitPython_Distance_Sensor](#CircuitPython_Distance_Sensor)
 * [CircuitPython_LCD](#CircuitPython_LCD)
-* [NextAssignmentGoesHere](#NextAssignment)
+* [LCD Capacitative Touch](#LCD_Capacitative_Touch)
 ---
 
 ## Hello_CircuitPython
@@ -19,15 +20,15 @@ import board
 import time
 
 import neopixel
-led = neopixel.NeoPixel(board.NEOPIXEL, 1)
+led = neopixel.NeoPixel(board.NEOPIXEL, 1) # This shows what led we are using
 
 led.brightness = 0.3
 
-print("Make Colors")
+print("Make Colors") # We use the serial monitor to display that the code is functioning
 
 while True:
     led[0] = (250, 0, 0)
-    time.sleep(0.8)
+    time.sleep(0.8) # The amount the LED sleeps is how long it takes before it blinks again
     led[0] = (0, 250, 0)
     time.sleep(0.8)
     led[0] = (0, 0, 250)
@@ -55,7 +56,7 @@ Here is the code than makes the servo spin 180 degrees.
 import time
 import board
 import pwmio
-from adafruit_motor import servo
+from adafruit_motor import servo # This shows what servo we are using
 
 # create a PWMOut object on Pin A2.
 pwm = pwmio.PWMOut(board.A2, duty_cycle=2 ** 15, frequency=50)
@@ -93,17 +94,17 @@ Mainly, the only problem I had was getting the code running, I had to "Make sure
 ### Description & Code
 
 ```python
-import time
+import time 
 import board
 import neopixel
-from adafruit_hcsr04 import HCSR04
+from adafruit_hcsr04 import HCSR04 # This shows what sensor we are using
 
 trig = board.A2
 echo = board.A3
-sonar = HCSR04(trig, echo)
+sonar = HCSR04(trig, echo) 
 dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
 dot.brightness = 0.7
-red = 225
+red = 225 
 green = 0
 blue = 0
 
@@ -112,7 +113,7 @@ distance = 0
 while True:
     dot.fill((red, green, blue))
     if distance <= 20:
-        red = 255 - (12 * distance)
+        red = 255 - (12 * distance) # This shows what distance is needed for that color
         blue = 0 + (12 * distance)
         green = 0
     if distance > 20:
@@ -138,16 +139,15 @@ while True:
 ```
 
 ### Evidence
-
-### Images
+<img src="https://github.com/rareval48/CircuitPython/blob/main/Images/distance_sensor.gif">
 
 ### Reflection
+This assignment taught me many things including how to use a distance sensor and how to set up/ plug in the distance sensor to the board. This assignment was pretty easy except for finding out how to change the led smoothly.
 
 
 
 
-
-## LCD Capacitative Touch
+## LCD_Capacitive_Touch
 
 ### Description & Code
 
@@ -159,7 +159,7 @@ import time
 import touchio
 
 touch = touchio.TouchIn(board.A0)
-touch2 = touchio.TouchIn(board.A2)
+touch2 = touchio.TouchIn(board.A1)
 
 i2c = board.I2C()
 lcd = LCD(I2CPCF8574Interface(i2c, 0x3f), 16, 2, 8)
@@ -212,8 +212,8 @@ while True:
 ```
 
 ### Evidence
-
-### Images
+<img src="https://user-images.githubusercontent.com/71342195/138705220-4aaea59b-582e-4ce8-a230-049f65b8504c.png" width="800px">
+<img src="https://user-images.githubusercontent.com/71342195/138706907-e211ae72-78aa-4830-a93c-60ff1ead6577.gif">
 
 ### Reflection
 It took me a week of working to get this working and was the most difficult assignment. I learned many things while going through this assignment. On of them being, you cant use both lcd.message and lcd.print in the same code. Otherwise it wont do anythng and will show an error.
