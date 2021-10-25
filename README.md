@@ -37,8 +37,10 @@ while True:
 ```
 
 
-### Images
-<img src="https://user-images.githubusercontent.com/71342195/132705470-5ed55196-d533-40a7-8287-22687f17d50c.jpg"> <img src="https://user-images.githubusercontent.com/71342195/132705916-4f73c04e-05ac-4eff-89e7-fa6141bc669f.jpg"> <img src="https://user-images.githubusercontent.com/71342195/132704790-18001dc9-acca-49ba-9342-20a454e6e22e.jpg">
+### Evidence and Wiring
+No wiring needed as I used onboard LED
+
+<img src="https://user-images.githubusercontent.com/71342195/132705470-5ed55196-d533-40a7-8287-22687f17d50c.jpg"> <img src="https://user-images.githubusercontent.com/71342195/132705916-4f73c04e-05ac-4eff-89e7-fa6141bc669f.jpg"><img src= "https://user-images.githubusercontent.com/71342195/132704790-18001dc9-acca-49ba-9342-20a454e6e22e.jpg" width="250px">
 
 ### Reflection
 The first thing that I had to do was see what was happened to the Metro becasue the serial monitor kept printing "Hello World" even though I had "Make Colors" with the print funtion. Then once that was fixed I had to see if the code I was using actually worked. Once I found out it worked I then stated filling out my notebook.
@@ -73,25 +75,24 @@ while True:
 
 ```
 
-### Wiring Diagram
-<img src="https://github.com/rareval48/CircuitPython/blob/main/Images/Servo.png?raw=true" width="800px">
 
 
-### Images
+### Images and Wiring
 <img src="https://user-images.githubusercontent.com/71342195/133264238-48bde56d-83d8-4563-89e4-3d9abb9a0ada.jpg">
 This first image is at the beginning at the rotation to 180 degrees
 <img src="https://user-images.githubusercontent.com/71342195/133264256-2c03cd86-2a41-430d-8bce-b1d57e3de1d5.jpg"> 
 The second image is at the end of the rotation to 180 degrees
+<img src="https://github.com/rareval48/CircuitPython/blob/main/Images/Servo.png?raw=true" width="800px">
 
 ### Reflection
-Mainly, the only problem I had was getting the code running, I had to "Make sure you have downloaded the appropriate Adafruit CircuitPython library bundle. So, if you're running version 6.x of CircuitPython, grab the 6.x bundle. Click "Extract All", then you'll find a "lib" folder and inside that you'll find an "adafruit_motor" folder, which contains the "servo.mpy" library.  Copy that file to the lib folder on your Metro and you can use Adafruit's amazing servo object!  In other words, you can say stuff like myServo.angle = 90 instead of having to figure out PWM communication." That was the hardest part of the project. The circuitry was pretty easy because there were only 3 wires to plug in.
+The only problem I had was getting the code running, I had to "Make sure you have downloaded the appropriate Adafruit CircuitPython library bundle. So, if you're running version 6.x of CircuitPython, grab the 6.x bundle. Click "Extract All", then you'll find a "lib" folder and inside that you'll find an "adafruit_motor" folder, which contains the "servo.mpy" library.  Copy that file to the lib folder on your Metro and you can use Adafruit's amazing servo object!  In other words, you can say stuff like myServo.angle = 90 instead of having to figure out PWM communication." That was the hardest part of the project. The circuitry was pretty easy because there were only 3 wires to plug in.
 
 
 
 ## CircuitPython_Distance_Sensor
 
 ### Description & Code
-
+Here's the code for sensing distance and using a LED to display it
 ```python
 import time 
 import board
@@ -149,7 +150,7 @@ This assignment taught me many things including how to use a distance sensor and
 ## LCD_Capacitive_Touch
 
 ### Description & Code
-
+Here is the code for LCD capacitive touch
 ```python
 from lcd.lcd import LCD
 from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
