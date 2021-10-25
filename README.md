@@ -156,7 +156,7 @@ from lcd.lcd import LCD
 from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
 import board
 import time
-import touchio
+import touchio # Let the board know what we wanted to do
 
 touch = touchio.TouchIn(board.A0)
 touch2 = touchio.TouchIn(board.A1)
@@ -166,7 +166,7 @@ lcd = LCD(I2CPCF8574Interface(i2c, 0x3f), 16, 2, 8)
 print("Starting")
 print("Chasing")
 print("Caught")
-lcd.print("Print Now!                 ")
+lcd.print("Print Now!                 ") # I put this here to show when the board reset
 time.sleep(1)
 lcd.print("No!")
 time.sleep(1)
@@ -180,7 +180,7 @@ b = 1
 Increase = 1
 ChangedAlready = 0
 
-while True:
+while True: # Almost everything below this point is from Logan Martins code for this assignment. The repo will be under the code.
     time.sleep(0.1)
     if touch.value:
         if Increase == 1:
@@ -193,10 +193,10 @@ while True:
             lcd.clear()
             a = a - b
             print(a)
-            lcd.print("\nTouches:")
+            lcd.print("\nTouches:") # Displays how many touches there are
             lcd.print(str(a))
     if touch2.value:
-        print("Switch")
+        print("Switch") # Switches from positive to negative touches
         if ChangedAlready == 0:
             if Increase == 1:
                 ChangedAlready = 1
@@ -208,8 +208,10 @@ while True:
     if ChangedAlready == 1:
         time.sleep(1)
         ChangedAlready = 0
+        
 
 ```
+https://github.com/Logan-Martin
 
 ### Evidence
 <img src="https://user-images.githubusercontent.com/71342195/138705220-4aaea59b-582e-4ce8-a230-049f65b8504c.png" width="800px">
