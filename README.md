@@ -211,7 +211,7 @@ while True: # Almost everything below this point is from Logan Martins code for 
         
 
 ```
-https://github.com/Logan-Martin
+Here is the link for Logan Martins github https://github.com/Logan-Martin
 
 ### Evidence
 <img src="https://user-images.githubusercontent.com/71342195/138705220-4aaea59b-582e-4ce8-a230-049f65b8504c.png" width="800px">
