@@ -49,7 +49,6 @@ The first thing that I had to do was see what was happened to the Metro becasue 
 ## CircuitPython_Servo
 
 ### Description & Code
-[Full code](https://github.com/rareval48/CircuitPython/blob/main/servocode.py)
 
 Here is the code than makes the servo spin 180 degrees.
 ```python
