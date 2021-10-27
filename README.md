@@ -6,7 +6,6 @@
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_Distance_Sensor](#CircuitPython_Distance_Sensor)
 * [LCD_Capacitive_Touch](#LCD_Capacitive_Touch)
-* [LCD Capacitative Touch](#LCD_Capacitative_Touch)
 ---
 
 ## Hello_CircuitPython
@@ -135,12 +134,11 @@ while True:
 
 ```
 
-### Evidence
+### Evidence and Wiring
 <img src="https://github.com/rareval48/CircuitPython/blob/main/Images/distance_sensor.gif">
 
 ### Reflection
-This assignment taught me many things including how to use a distance sensor and how to set up/ plug in the distance sensor to the board. This assignment was pretty easy except for finding out how to change the led smoothly.
-
+This assignment taught me many things including how to use a distance sensor and how to set up/ plug in the distance sensor to the board. It was pretty easy to get everything setup and get the code to work  all I had to do was to find out how to get the LED to change smoothly. I got it to run smoothly by mixing code from the Hello_CircuitPython assignment above and code from a couple of adafruits websites. :neckbeard:
 
 
 
@@ -210,9 +208,9 @@ while True: # Almost everything below this point is from Logan Martins code for 
 ```
 [Link for Logan Martins github](https://github.com/Logan-Martin)
 
-### Evidence
+### Evidence and Wiring
 <img src="https://user-images.githubusercontent.com/71342195/138705220-4aaea59b-582e-4ce8-a230-049f65b8504c.png" width="800px">
 <img src="https://user-images.githubusercontent.com/71342195/138706907-e211ae72-78aa-4830-a93c-60ff1ead6577.gif">
 
 ### Reflection
-It took me a week of working to get this working and was the most difficult assignment. I learned many things while going through this assignment. On of them being, you cant use both lcd.message and lcd.print in the same code. Otherwise it wont do anythng and will show an error.
+It took me a week of working to get this working and was the most difficult assignment. I learned many things while going through this assignment. On of them being, you cant use both lcd.message and lcd.print in the same code. Otherwise it wont do anythng and will show an error. I also had to go on different adafruit websites to try to find code that would work with the backpack on the back of the LCD. Mr. Deirolf ended up working out the code, so the top half of my code is based off of Mr. Deirolf's code.
