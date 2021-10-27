@@ -5,7 +5,7 @@
 * [Hello_CircuitPython](#Hello_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_Distance_Sensor](#CircuitPython_Distance_Sensor)
-* [CircuitPython_LCD](#CircuitPython_LCD)
+* [LCD_Capacitive_Touch](#LCD_Capacitive_Touch)
 * [LCD Capacitative Touch](#LCD_Capacitative_Touch)
 ---
 
