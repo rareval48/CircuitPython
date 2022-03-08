@@ -1,11 +1,11 @@
 # CircuitPython
  The follwing files are my first foray into CircuitPython.
 ## Table of Contents
-* [Table of Contents](#TableOfContents)
 * [Hello_CircuitPython](#Hello_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_Distance_Sensor](#CircuitPython_Distance_Sensor)
 * [LCD_Capacitive_Touch](#LCD_Capacitive_Touch)
+* [Classes_Objects_and_Modules](#Classes_Objects_and_Modules)
 ---
 
 ## Hello_CircuitPython
@@ -214,3 +214,63 @@ while True: # Almost everything below this point is from Logan Martins code for 
 
 ### Reflection
 It took me a week of working to get this working and was the most difficult assignment. I learned many things while going through this assignment. On of them being, you cant use both lcd.message and lcd.print in the same code. Otherwise it wont do anythng and will show an error. I also had to go on different adafruit websites to try to find code that would work with the backpack on the back of the LCD. Mr. Deirolf ended up working out the code, so the top half of my code is based off of Mr. Deirolf's code.
+
+## Classes_Objects_and_Modules
+
+### Description and Code
+This code allows another piece of code to run without the second piece of code having to be unnecessarily long.
+
+```python
+from digitalio import DigitalInOut, Direction
+class RGB:
+    # declare object with a red pin, green pin, blue pin
+    def __init__(self, red, green, blue):
+        self.RedLed = DigitalInOut(red)
+        self.RedLed.direction = Direction.OUTPUT
+        self.GreenLed = DigitalInOut(green)
+        self.GreenLed.direction = Direction.OUTPUT
+        self.BlueLed = DigitalInOut(blue)
+        self.BlueLed.direction = Direction.OUTPUT
+
+    # only red is on
+    def red(self):
+        self.RedLed.value = 255
+        self.GreenLed.value = 0
+        self.BlueLed.value = 0
+
+    # only green is on
+    def green(self):
+        self.RedLed.value = 0
+        self.GreenLed.value = 250
+        self.BlueLed.value = 0
+
+    # only blue is on
+    def blue(self):
+        self.RedLed.value = 0
+        self.GreenLed.value = 0
+        self.BlueLed.value = 255
+
+    # only red and green are on
+    def yellow(self):
+        self.RedLed.value = 255
+        self.GreenLed.value = 100
+        self.BlueLed.value = 0
+
+    # only red and blue are on
+    def magenta(self):
+        self.RedLed.value = 255
+        self.GreenLed.value = 0
+        self.BlueLed.value = 100
+
+    # only blue and green are on
+    def cyan(self):
+        self.RedLed.value = 0
+        self.GreenLed.value = 255
+        self.BlueLed.value = 255
+        
+
+```
+### Evidence & Wiring
+The code below allows the LEDs to change colors by using a class. 
+
+<img src="https://user-images.githubusercontent.com/71342195/157257842-6fb8c05a-99df-4a6d-9e72-c024db789b42.png"><img src="https://user-images.githubusercontent.com/71342195/157259088-ff4afe22-2708-456e-b7d6-e547a445cf44.gif">
