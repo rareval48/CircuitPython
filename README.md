@@ -6,6 +6,7 @@
 * [CircuitPython_Distance_Sensor](#CircuitPython_Distance_Sensor)
 * [LCD_Capacitive_Touch](#LCD_Capacitive_Touch)
 * [Classes_Objects_and_Modules](#Classes_Objects_and_Modules)
+* [Fun_With_RGB_LEDs](#Fun_With_RGB_LEDs)
 ---
 
 ## Hello_CircuitPython
@@ -274,3 +275,75 @@ class RGB:
 The code below allows the LEDs to change colors by using a class. 
 
 <img src="https://user-images.githubusercontent.com/71342195/157257842-6fb8c05a-99df-4a6d-9e72-c024db789b42.png"><img src="https://user-images.githubusercontent.com/71342195/157259088-ff4afe22-2708-456e-b7d6-e547a445cf44.gif">
+
+## Fun_With_RGB_LEDs
+
+### Description and Code
+This code allows you to change the time that the leds blink and allows you to control how bright or dim they are.
+
+```python
+import time
+import board
+from rgbfade import RGB
+
+r1 = board.D8
+g1 = board.D9
+b1 = board.D10
+
+r2 = board.D4
+g2 = board.D5
+b2 = board.D7  # D6 is using the same timer as D8,9,10.  Avoid!
+
+
+full = 65535
+half = int(65535/10)
+
+LED1 = RGB(r1, g1, b1)
+LED2 = RGB(r2, g2, b2)
+
+
+while True:
+
+    LED1.red()
+    LED2.cyan()
+    time.sleep(1)
+    LED1.red(half)
+    LED2.cyan(half)
+    time.sleep(1)
+
+    LED1.blue()
+    LED2.yellow()
+    time.sleep(1)
+    LED1.blue(half)
+    LED2.yellow(half)
+    time.sleep(1)
+
+    LED1.green()
+    LED2.magenta()
+    time.sleep(1)
+    LED1.green(half)
+    LED2.magenta(half)
+    time.sleep(1)
+
+    LED1.white()
+    LED2.white()
+    time.sleep(.25)
+    LED1.white(half)
+    LED2.white(half)
+    time.sleep(.25)
+    LED1.white()
+    LED2.white()
+    time.sleep(.25)
+    LED1.white(half)
+    LED2.white(half)
+    time.sleep(.25)
+
+
+        
+
+```
+
+### Evidence and Wiring
+
+This code was really easy as all you had to do was adapt the code from an earlier assignment to make sure that the dimmer worked. In the earlier code (in module Classes Objects and Modules) all you had to do was add full and half so the board knew what both those terms meant.
+<img src="https://user-images.githubusercontent.com/71342195/158599840-17313220-4bc8-42ac-a560-13957b2a3371.gif"><img src="https://user-images.githubusercontent.com/71342195/158600613-babc5a84-a8eb-42d2-a0ed-cbd52d632336.png">
