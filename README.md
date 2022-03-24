@@ -237,7 +237,7 @@ while True: # Almost everything below this point is from Logan Martins code for 
 <img src="https://user-images.githubusercontent.com/71342195/138706907-e211ae72-78aa-4830-a93c-60ff1ead6577.gif">
 
 ### Reflection
-It took me a week of working to get this working and was the most difficult assignment. I learned many things while going through this assignment. On of them being, you cant use both lcd.message and lcd.print in the same code. Otherwise it wont do anythng and will show an error. I also had to go on different adafruit websites to try to find code that would work with the backpack on the back of the LCD. Mr. Deirolf ended up working out the code, so the top half of my code is based off of Mr. Deirolf's code.
+It took me a week of working to get this working and was the most difficult assignment. I learned many things while going through this assignment. On of them being, you cant use both lcd.message and lcd.print in the same code. Otherwise it wont do anythng and will show an error. I also had to go on different adafruit websites to try to find code that would work with the backpack on the back of the LCD. Mr. Deirolf ended up working out the code, so the top half of my code is based off of [Mr. Deirolf's code](https://github.com/OneCHSEngr/CircuitPython).
 
 '''
 </p>
